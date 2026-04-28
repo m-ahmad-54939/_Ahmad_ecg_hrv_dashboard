@@ -16,7 +16,27 @@ from ecg_processor import (
 
 st.set_page_config(page_title="ECG & HRV Analysis Dashboard", layout="wide")
 
-st.title("ECG Signal Processing & HRV Analysis Dashboard")
+st.markdown("""
+<div style="text-align: center; margin-bottom: 20px;">
+    <h2>Riphah International University, Lahore</h2>
+    <h4>Faculty of Engineering & Applied Sciences</h4>
+    <h4>Department of Biomedical Engineering</h4>
+    <p style="font-size: 18px;">
+        <b>Program:</b> B.Sc. Biomedical Engineering &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; <b>Semester:</b> VI <br>
+        <b>Subject:</b> Biomedical Signal Processing &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; <b>Experiment #:</b> 5
+    </p>
+</div>
+<hr>
+""", unsafe_allow_html=True)
+
+col_name, col_sap = st.columns(2)
+with col_name:
+    st.text_input("Name:", placeholder="Enter your Name")
+with col_sap:
+    st.text_input("SAP ID:", placeholder="Enter your SAP ID")
+
+st.markdown("<hr>", unsafe_allow_html=True)
+st.title("Open Ended Lab 1: ECG & HRV Analysis Dashboard")
 
 # --- SIDEBAR CONTROLS ---
 st.sidebar.header("Configuration")
